@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  --color-burnt-orange: #D5360C;
+  --color-burnt-orange-deep: #A92A0A;
+  --color-burnt-orange-light: #E0441D;
+
+  --color-warm-ivory: #E6D5BD;
+  --color-ivory-light: #F2E9DC;
+  --color-ivory-muted: #C7B69F;
+
+  --color-soft-black: #101010;
+  --color-black-border: #35302C;
+
+  /* Semantic UI Tokens */
+  --color-background: #E6D5BD;
+  --color-surface: #F2E9DC;
+  --color-surface-light: #FAF5EE;
+  --color-surface-deep: #D5360C;
+  --color-text: #101010;
+  --color-text-contrast: #F2E9DC;
+  --color-primary: #D5360C;
+  --color-border: #35302C;
+
+  --font-display: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), "IBM Plex Mono", monospace;
+  --font-grotesk: var(--font-space-grotesk), sans-serif;
+}
+
+:root {
+  --color-burnt-orange: #D5360C;
+  --color-burnt-orange-deep: #A92A0A;
+  --color-burnt-orange-light: #E0441D;
+
+  --color-warm-ivory: #E6D5BD;
+  --color-ivory-light: #F2E9DC;
+  --color-ivory-muted: #C7B69F;
+
+  --color-soft-black: #101010;
+  --color-black-border: #35302C;
+
+  --color-background: var(--color-warm-ivory);
+  --color-surface: var(--color-ivory-light);
+  --color-text: var(--color-soft-black);
+  --color-primary: var(--color-burnt-orange);
+  --color-contrast: var(--color-soft-black);
+  --color-border: #35302C;
+
+  /* Semantic UI Tokens */
+  --background: #E6D5BD;
+  --foreground: #101010;
+  --border-warm: #35302C;
+  --border-light: rgba(16, 16, 16, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #E6D5BD;
+  color: #101010;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E6D5BD;
+  color: #101010;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #D5360C;
+  color: #F2E9DC;
+}
+
+/* Custom Editorial Typographic Utilities */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-grotesk {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+/* Contemporary Editorial Headlines — Calibrated for Viewport Efficiency */
+.headline-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+.headline-section {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 2.6vw, 2.35rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.headline-subsection {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  font-weight: 500;
+}
+
+/* Technical Precision Grid Backgrounds */
+.tech-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(16, 16, 16, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 16, 16, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.tech-grid-light-bg {
+  background-image: 
+    linear-gradient(to right, rgba(16, 16, 16, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 16, 16, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.tech-grid-dark-bg {
+  background-image: 
+    linear-gradient(to right, rgba(230, 213, 189, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230, 213, 189, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E6D5BD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5360C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A92A0A;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
